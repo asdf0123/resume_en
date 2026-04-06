@@ -3,49 +3,44 @@
 \documentclass{resume}
 %\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
 %\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{hyperref}
 
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{Bin Yuan}
+\name{Jinglin Zhao}
 
 \basicInfo{
-  \email{yuanbin2014@gmail.com} \textperiodcentered\ 
-  \phone{(+86) 131-221-87xxx} \textperiodcentered\ 
-  \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
+  \email{2469197864@qq.com} \textperiodcentered\ 
+  \faPhone \href{tel:17710703750}{(+86) 177-1070-3750} \textperiodcentered\ 
+  \faHome {\href{https://asdf0123.github.io}{zjlhhh123}}
+}
 
 \section{\faGraduationCap\ Education}
-\datedsubsection{\textbf{Shanghai Jiao Tong University (SJTU)}, Shanghai, China}{2013 -- Present}
-\textit{Master student} in Electronics Engineering (EE), expected March 2016
-\datedsubsection{\textbf{Xidian University}, Shaanxi, China}{2009 -- 2013}
-\textit{B.S.} in Electronics Engineering (EE)
+\datedsubsection{\textbf{University of Chinese Academy of Sciences}, Beijing, China}{2020 -- 2024}
+\textit{Master of Science} in Cybersecurity
+\datedsubsection{\textbf{Zhejiang University}, Zhejiang, China}{2016 -- 2020}
+\textit{Bachelor of Science} in Computer Science and Technology
 
 \section{\faUsers\ Experience}
-\datedsubsection{\textbf{FLAG Inc.} California, America}{2012 -- Present}
-\role{Summer Intern}{Manager: xxx}
-Brief introduction: xxx.
+\datedsubsection{\textbf{PhotonChord Tech Inc.} Zhejiang, China}{2024 -- Present}
+\role{Senior c++ Software Developer}{}
+Brief introduction: Revealing the gateway thread model and monitoring the optimized performance.
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+  \item Reverse-engineered a closed-source gateway to analysis SSL traffic and its undocumented protocol
+  \item Developed a project (using Rust) to extract session keys of SSL connection
+  \item Reduced the gateway latency median from 13.428 $\mu$s to 12.338 $\mu$s by hooking system dynamic-link libraries
+  \item Developed an offline monitor (using Rust) to analysis SSL traffic and measure gateway performance
 \end{itemize}
 
-\datedsubsection{\textbf{xxx Projects}}{Jan. 2015 -- Present}
-\role{C, Python, Django, Linux}{Individual Projects, collaborated with xxx}
-Brief introduction: xxx
+\datedsubsection{\textbf{Game Calculator}}{2020 -- Present}
+\role{c++, Python, Rust}{Individual Project}
+Brief introduction: Calculator for some online boardgames 
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
-\end{itemize}
-
-\datedsubsection{\textbf{\LaTeX\ résumé template}}{May. 2015 -- Present}
-\role{\LaTeX, Maintainer}{Individual Projects}
-An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
-\begin{itemize}
-  \item Easy to be further customized or extended
-  \item Full support for unicode characters (e.g. CJK) with \XeLaTeX\
-  \item FontAwesome 4.5.0 support
+  \item Implemented a state-compressed DP algorithm to enumerate all possibilities and recommend optimal moves in \href{https://github.com/asdf0123/game-calculator/tree/master/submodules}{\textit {soluna}} 
+  \item Developed a tool to exclude impossible answers in \href{https://github.com/asdf0123/game-calculator?tab=readme-ov-file#turing-machine}{\textit {turing machine}}
+  \item Developed a tool that helps me decide whether to stop or not according to probability theory in  \href{https://github.com/asdf0123/game-calculator?tab=readme-ov-file#cant-stop}{\textit {can't stop}}
+  \item Achieved championship title in \textit{soluna}, and top 10 in \textit{turing machine} using these tools
 \end{itemize}
 
 % Reference Test
@@ -57,24 +52,19 @@ An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
 
 \section{\faCogs\ Skills}
 \begin{itemize}[parsep=0.5ex]
-  \item Programming Languages: C == Python > C++ > Java
-  \item Platform: Linux
-  \item Development: Web, xxx
+  \item Programming Languages (listed by proficiency): x86 asm, c, c++, Rust
+  \item Languages: English - Fluent (Achieved a TOFEL score of 80/120 in 2018)
 \end{itemize}
 
-\section{\faHeartO\ Honors and Awards}
-\datedline{\textit{\nth{1} Prize}, Award on xxx }{Jun. 2013}
-\datedline{Other awards}{2015}
+\section{\faTrophy\ Honors and Awards}
+\datedline{First-Class Scholarship, Zhejiang University}{2017}
+\datedline{\textit{Silver Medal, \nth{30}}, captain of \textit{aftermath},  \href{https://icpc.global/regionals/finder/shenyang-2018/standings}{2017 ACM-ICPC Asia Shenyang Regional Contest}}{2017}
+\datedline{First-Class Scholarship, Zhejiang University}{2018}
+\datedline{\nth{16}, member of \href{https://nese.team/members/active/}{\textit{NeSE}}, \href{https://ctftime.org/event/1871}{DEF CON CTF Qualifier 2023}}{2023}
+\datedline{\nth{9}, member of \href{https://nese.team/members/active/}{\textit{NeSE}}, \href{https://ctftime.org/event/2229}{DEF CON CTF Qualifier 2024}}{2024}
 
-\section{\faInfo\ Miscellaneous}
-\begin{itemize}[parsep=0.5ex]
-  \item Blog: http://your.blog.me
-  \item GitHub: https://github.com/username
-  \item Languages: English - Fluent, Mandarin - Native speaker
-\end{itemize}
+\section{\faInfoCircle\ Summary}
+~~I am a 28-year-old skilled engineer with expertise in developing low-latency software for other private investment firms using c++. I'm now designing an online monitor, utilizing \textbf{lock-free queues} for message passing between socket-based producer threads and analytical consumer threads. Although I am hired as a \textit{Senior c++ Software Engineer}, I've been working with \textbf{Rust} for a year and have been implementing task using Rust in my work if possible. The main reason prevents me from using Rust is that lots of basic code, such as network interface card drivers, is developed in c++ and FFI is not strong enough to have Rust call c++ functions.
 
-%% Reference
-%\newpage
-%\bibliographystyle{IEEETran}
-%\bibliography{mycite}
+~~To sum up, I feel qualified to be a Rust developer because of my experience in algorithms, network and c++. Though not familiar with distributed system, I guess I can catch up.
 \end{document}
